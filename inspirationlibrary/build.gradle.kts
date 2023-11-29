@@ -7,7 +7,7 @@ plugins {
     id("com.gradle.plugin-publish") version "1.1.0"
 }
 
-extra["PUBLISH_GROUP_ID"] = "io.github.shahbaz213"
+extra["PUBLISH_GROUP_ID"] = "com.github.shahbaz213"
 extra["PUBLISH_VERSION"] = "1.0"
 extra["PUBLISH_ARTIFACT_ID"] = "inspirationlibrary"
 extra["PUBLISH_DESCRIPTION"] = "An android gradle plugin for localization"
@@ -37,7 +37,7 @@ gradlePlugin {
     vcsUrl.set(extra["PUBLISH_URL"] as String)
     plugins {
         create("InspirationAppPlugin") {
-            id = "io.github.shahbaz213.inspirationlibrary"
+            id = "com.github.shahbaz213.inspirationlibrary"
             implementationClass = "com.app.inspirationlibrary.plugin.inspirationlibrary"
             displayName = "LokaleNow Android Plugin"
             description = "Android gradle plugin for app's localization"
@@ -45,6 +45,23 @@ gradlePlugin {
         }
     }
 }
+
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            // Creates a Maven publication called "release".
+//            create<MavenPublication>("release") {
+//                // Applies the component for the release build variant.
+//                from(components["release"])
+//                // You can then customize attributes of the publication as shown below.
+//                groupId = "com.github.shahbaz213"
+//                artifactId = "inspirationlibrary"
+//                version = "1.0"
+//            }
+//        }
+//    }
+//}
+
 dependencies {
 
     implementation("com.android.tools.build:gradle:7.4.0-rc03")
