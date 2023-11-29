@@ -27,7 +27,7 @@ group = extra["PUBLISH_GROUP_ID"] as String
 publishing{
     repositories {
         maven {
-            url = uri("C:\\repo")
+            mavenLocal()
         }
     }
 }
