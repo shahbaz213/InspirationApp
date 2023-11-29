@@ -9,17 +9,17 @@ plugins {
 
 extra["PUBLISH_GROUP_ID"] = "io.github.shahbaz213"
 extra["PUBLISH_VERSION"] = "1.0"
-extra["PUBLISH_ARTIFACT_ID"] = "lokalenow"
+extra["PUBLISH_ARTIFACT_ID"] = "inspirationlibrary"
 extra["PUBLISH_DESCRIPTION"] = "An android gradle plugin for localization"
-extra["PUBLISH_URL"] = "https://github.com/farimarwat/LokaleNow"
+extra["PUBLISH_URL"] = "https://github.com/shahbaz213/InspirationApp"
 extra["PUBLISH_LICENSE_NAME"] = "Apache 2.0 License"
 extra["PUBLISH_LICENSE_URL"] = "https://www.apache.org/licenses/LICENSE-2.0"
 extra["PUBLISH_DEVELOPER_ID"] = "shahbaz213"
 extra["PUBLISH_DEVELOPER_NAME"] = "Malik Shahbaz"
 extra["PUBLISH_DEVELOPER_EMAIL"] = "malikshahbaz213@gmail.com"
-extra["PUBLISH_SCM_CONNECTION"] = "scm:git:github.com/farimarwat/LokaleNow.git"
-extra["PUBLISH_SCM_DEVELOPER_CONNECTION"] = "scm:git:ssh://github.com/farimarwat/LokaleNow.git"
-extra["PUBLISH_SCM_URL"] = "https://github.com/farimarwat/LokaleNow/tree/master"
+extra["PUBLISH_SCM_CONNECTION"] = "scm:git:github.com/shahbaz213/InspirationApp.git"
+extra["PUBLISH_SCM_DEVELOPER_CONNECTION"] = "scm:git:ssh://github.com/shahbaz213/InspirationApp.git"
+extra["PUBLISH_SCM_URL"] = "https://github.com/shahbaz213/InspirationApp/tree/master"
 
 
 version = extra["PUBLISH_VERSION"] as String
@@ -36,9 +36,9 @@ gradlePlugin {
     website.set(extra["PUBLISH_URL"] as String)
     vcsUrl.set(extra["PUBLISH_URL"] as String)
     plugins {
-        create("LokaleNowPlugin") {
-            id = "io.github.farimarwat.lokalenow"
-            implementationClass = "com.app.inspirationlibrary.plugin.LokaleNow"
+        create("InspirationAppPlugin") {
+            id = "io.github.shahbaz213.inspirationlibrary"
+            implementationClass = "com.app.inspirationlibrary.plugin.inspirationlibrary"
             displayName = "LokaleNow Android Plugin"
             description = "Android gradle plugin for app's localization"
             tags.set(listOf("android", "locale","string"))
